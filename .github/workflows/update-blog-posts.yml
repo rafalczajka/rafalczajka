@@ -5,6 +5,10 @@ on:
     types:
       - sanity-blog-published
 
+  push:
+    branches:
+      - main
+
   workflow_dispatch:
 
 permissions:

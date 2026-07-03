@@ -55,6 +55,7 @@ function normalizePost(post, index) {
   return {
     title: post.title.trim(),
     href: new URL(post.href, BLOG_URL).toString(),
+    category: typeof post.category === 'string' ? post.category.trim() : '',
     date: typeof post.date === 'string' ? post.date.trim() : '',
   };
 }
@@ -70,9 +71,10 @@ ${END_MARKER}`;
 }
 
 function formatPostLine(post) {
-  const dateSuffix = post.date ? ` - ${escapeMarkdownText(post.date)}` : '';
+  const metadata = [post.category, post.date].filter(Boolean).map(escapeMarkdownText);
+  const metadataSuffix = metadata.length > 0 ? ` - ${metadata.join(' - ')}` : '';
 
-  return `- [${escapeMarkdownText(post.title)}](${post.href})${dateSuffix}`;
+  return `- [${escapeMarkdownText(post.title)}](${post.href})${metadataSuffix}`;
 }
 
 function replaceBlogPostsBlock(readme, blogPostsBlock) {

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 352" fill="none">
+  <title>RC monogram</title>
+  <desc>Interwoven circular and diagonal lines suggest R and a reversed C, following the original sketch.</desc>
+  <g stroke="#071C0C" stroke-width="5" stroke-linecap="butt" stroke-linejoin="miter">
+    <!-- Concentric arcs open left and terminate on the bordering diagonals. -->
+    <path d="M 73.891962 102.176233 A 126 126 0 1 1 73.891962 249.823767" />
+    <path d="M 88.250799 116.535071 A 106 106 0 1 1 88.250799 235.464929" />
+    <!-- Continuous joins keep the two exposed corners clean. -->
+    <path d="M 34 62.284271 L 102.713972 130.998243 A 86 86 0 1 1 102.713972 221.001757 L 34 289.715729" />
+
+    <!-- Upright endpoints lie on the outer ring; all parallel strokes are 20 units apart. -->
+    <path d="M 176 320 V 30 A 146 146 0 0 1 322 176 H 196" />
+    <path d="M 156 51.597428 V 300.402572 M 196 51.597428 V 300.402572" />
+
+    <path d="M 196 156 H 300.402572" />
+    <path d="M 300.402572 196 H 224.284271 L 318 289.715729" stroke-linejoin="bevel" />
+
+    <!-- Diagonals are 20 units apart; their terminals meet the square from (34, 34) to (318, 318). -->
+    <path d="M 34 34 L 115.188817 115.188817 M 62.284271 34 L 130.998243 102.713972" />
+    <path d="M 34 318 L 115.188817 236.811183 M 62.284271 318 L 130.998243 249.286028" />
+    <!-- Mirror the left terminals; join the lower-right corner without crossing its rails. -->
+    <path d="M 196 196 L 318 318 M 196 224.284271 L 289.715729 318" />
+  </g>
+</svg>
